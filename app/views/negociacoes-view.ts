@@ -1,10 +1,11 @@
 import { Negociacoes } from './../models/negociacoes.js';
-export class NegociacoesView {
+import { View } from './view.js';
+export class NegociacoesView extends View<Negociacoes> {
 
-    private elemento: HTMLLIElement;
-    constructor(seletor: string){
-        this.elemento = document.querySelector(seletor);
-    }
+    // private elemento: HTMLLIElement;
+    // constructor(seletor: string){
+    //     this.elemento = document.querySelector(seletor);
+    // }
 
     template(model: Negociacoes): string {
         return `
@@ -31,7 +32,7 @@ export class NegociacoesView {
         `;
     }
 
-    update(model: Negociacoes): void {
-        this.elemento.innerHTML = this.template(model);
-    }
+    // update(model: Negociacoes): void {
+    //     this.elemento.innerHTML = this.template(model);
+    // }
 }
